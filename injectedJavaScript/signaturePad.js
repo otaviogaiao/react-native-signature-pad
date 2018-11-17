@@ -536,12 +536,12 @@ SignaturePad.prototype._toSVG = function() {
         !isNaN(curve.control2.y)
       ) {
         const attr =
-          \`M ${curve.startPoint.x.toFixed(3)},${curve.startPoint.y.toFixed(
+          \`M \${curve.startPoint.x.toFixed(3)},\${curve.startPoint.y.toFixed(
   3
 )} \` +
-          \`C ${curve.control1.x.toFixed(3)},${curve.control1.y.toFixed(3)} \` +
-          \`${curve.control2.x.toFixed(3)},${curve.control2.y.toFixed(3)} \` +
-          \`${curve.endPoint.x.toFixed(3)},${curve.endPoint.y.toFixed(3)}\`;
+          \`C \${curve.control1.x.toFixed(3)},\${curve.control1.y.toFixed(3)} \` +
+          \`\${curve.control2.x.toFixed(3)},\${curve.control2.y.toFixed(3)} \` +
+          \`\${curve.endPoint.x.toFixed(3)},\${curve.endPoint.y.toFixed(3)}\`;
 
         path.setAttribute("d", attr);
         path.setAttribute("stroke-width", (widths.end * 2.25).toFixed(3));
@@ -570,9 +570,9 @@ SignaturePad.prototype._toSVG = function() {
     "<svg" +
     ' xmlns="http://www.w3.org/2000/svg"' +
     ' xmlns:xlink="http://www.w3.org/1999/xlink"' +
-    \` viewBox="${minX} ${minY} ${maxX} ${maxY}"\` +
-    \` width="${maxX}"\` +
-    \` height="${maxY}"\` +
+    \` viewBox="\${minX} \${minY} \${maxX} \${maxY}"\` +
+    \` width="\${maxX}"\` +
+    \` height="\${maxY}"\` +
     ">";
   let body = svg.innerHTML;
 
