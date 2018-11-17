@@ -119,6 +119,7 @@ class SignaturePad extends Component {
         source={this.source}
         javaScriptEnabled={true}
         style={this.props.style}
+        useWebKit
       />
     );
   };

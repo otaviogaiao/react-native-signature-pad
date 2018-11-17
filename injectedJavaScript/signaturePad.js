@@ -613,3 +613,5 @@ SignaturePad.prototype.toData = function() {
 
 return SignaturePad;
 })(document);`;
+
+export default content;
